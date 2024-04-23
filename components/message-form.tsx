@@ -1,4 +1,4 @@
-import { sendMessage } from "@/lib/actions"
+import { sendMessage } from "@/lib/actions/messages"
 import { cn } from "@/lib/utils"
 import { ArrowUp } from "lucide-react"
 import { ComponentPropsWithoutRef } from "react"
