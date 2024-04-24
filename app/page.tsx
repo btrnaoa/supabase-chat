@@ -1,6 +1,6 @@
 import Chat from "@/components/chat"
 import MessageForm from "@/components/message-form"
-import UserNav from "@/components/user-nav"
+import UserLogin from "@/components/user-login"
 import db from "@/lib/db"
 import { messages } from "@/lib/schema"
 
@@ -9,8 +9,8 @@ export default async function Home() {
 
   return (
     <>
-      <UserNav />
       <div className="mx-4 flex h-svh flex-col sm:mx-auto sm:h-3/4 sm:max-w-prose">
+        <UserLogin className="mt-2 self-end" />
         <Chat initialMessages={allMessages} className="my-2 grow sm:mt-4" />
         <MessageForm className="mb-4" />
       </div>
