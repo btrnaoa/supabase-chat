@@ -21,7 +21,7 @@ export default function MessageForm({ className }: MessageFormProps) {
       }}
       className={cn(className, "flex gap-2")}
     >
-      <Input type="text" name="message" required />
+      <Input type="text" name="message" autoComplete="off" required />
       <Button type="submit" variant="outline" size="icon" className="flex-none">
         <ArrowUp className="h-4 w-4" />
       </Button>

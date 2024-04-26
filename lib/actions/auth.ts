@@ -2,7 +2,6 @@
 
 import { eq, sql } from "drizzle-orm"
 import { revalidatePath } from "next/cache"
-import { redirect } from "next/navigation"
 import { getSession } from "../auth"
 import db from "../db"
 import { users } from "../schema"
@@ -34,7 +33,7 @@ export async function login(
     session.isLoggedIn = true
 
     await session.save()
-    redirect("/")
+    revalidatePath("/")
   }
 }
 

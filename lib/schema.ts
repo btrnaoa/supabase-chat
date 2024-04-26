@@ -18,7 +18,12 @@ export const messages = pgTable("messages", {
     .$defaultFn(() => nanoid())
     .primaryKey(),
   content: text("content").notNull(),
-  createdAt: timestamp("created_at").defaultNow(),
+  createdAt: timestamp("created_at", {
+    mode: "string",
+    withTimezone: true,
+  })
+    .defaultNow()
+    .notNull(),
   userId: text("user_id"),
 })
 
